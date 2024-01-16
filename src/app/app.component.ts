@@ -10,4 +10,8 @@ export class AppComponent {
   constructor() {
     this.isDisabled = true
   }
+
+  saludo() {
+    alert('Hola!')
+  }
 }
