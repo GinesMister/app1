@@ -8,13 +8,21 @@
 </head>
 <body>
   <div class="container">
-
-    <label class="">Introduce el texto</label>
+    <h1>Calculadora</h1>
+    <label class="">Operando A</label>
     <br>
-    <input class="form-control" type="text" id="inText" [(ngModel)]="input" />
+    <input class="form-control" type="number" id="inText" [(ngModel)]="inputA" />
     <br>
-    <button class="btn btn-primary" id="butt" (click)="invertirTexto">Dar la vuelta al texto</button>
-    <input class="form-control" type="text" id="outText" readonly [(ngModel)]="output">
+    <label class="">Operando B</label>
+    <br>
+    <input class="form-control" type="number" id="inText" [(ngModel)]="inputB" />
+    <br>
+    <button class="btn btn-primary me-2" id="butt" (click)="sumar">+</button>
+    <button class="btn btn-primary me-2" id="butt" (click)="restar">-</button>
+    <button class="btn btn-primary me-2" id="butt" (click)="multiplicar">*</button>
+    <button class="btn btn-primary me-2" id="butt" (click)="dividir">/</button>
+    <br>
+    <input class="form-control mt-3" type="text" id="outText" readonly [(ngModel)]="output">
   </div>
 </body>
 </html>

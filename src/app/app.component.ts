@@ -6,9 +6,28 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  input: string = ''
-  output: string = ''
-  invertirTexto() {
-    this.output = this.input.split('').reverse().join('')
+  inputA = ''
+  inputB = ''
+  output = 0
+
+  sumar() {
+    this.output = Number(this.inputA) + Number(this.inputB)
+    this.inputA = ''
+    this.inputB = ''
+  }
+  restar() {
+    this.output = Number(this.inputA) + Number(this.inputB)
+    this.inputA = ''
+    this.inputB = ''
+  }
+  multiplicar() {
+    this.output = Number(this.inputA) + Number(this.inputB)
+    this.inputA = ''
+    this.inputB = ''
+  }
+  dividir() {
+    this.output = Number(this.inputA) + Number(this.inputB)
+    this.inputA = ''
+    this.inputB = ''
   }
 }
