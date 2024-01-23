@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  edad = 18
+  arrInt = [1, 2, 3, 4 ,5 ,123, 321, 12, 21, 32, 23]
 }
