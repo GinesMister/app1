@@ -6,11 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  operandoA = ''
-  operandoB = ''
-  output = 0
-
-  sumar(operandoA: HTMLInputElement, operandoB: HTMLInputElement, resultado: HTMLInputElement) {
-    resultado.value = String(Number(operandoA.value) + Number(operandoB.value))
-  }
+  edad = 18
 }

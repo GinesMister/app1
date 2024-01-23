@@ -7,23 +7,24 @@
   <title>Mi sitio</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Calculadora</h1>
-    <label class="">Operando A</label>
-    <br>
-    <input id="operandoA" #operandoA class="form-control" type="number" id="inText"/>
-    <br>
-    <label class="">Operando B</label>
-    <br>
-    <input id="operandoB" #operandoB class="form-control" type="number" id="inText"/>
-    <br>
-    <button class="btn btn-primary me-2" id="butt" (click)="sumar(operandoA, operandoB, resultado)">+</button>
-    <!-- <button class="btn btn-primary me-2" id="butt" (click)="restar">-</button>
-    <button class="btn btn-primary me-2" id="butt" (click)="multiplicar">*</button>
-    <button class="btn btn-primary me-2" id="butt" (click)="dividir">/</button> -->
-    <br>
-    <input id="resultado" #resultado class="form-control mt-3" type="text" readonly>
+  <div *ngIf="edad >= 18; else Menor">
+    <p>Zona para mayores</p>
   </div>
+
+  <ng-template #Menor>
+    <p>No puedes entrar aquí</p>
+  </ng-template>
+
+  <!-- Forma moderna -->
+  <hr>
+  <div>
+    @if (edad >= 18) {
+      <p>Puedes entrar en esta zona porque eres mayor</p>
+    } @else {
+      <p>No puedes entrar en esta zona porque eres menor</p>
+    }
+  </div>
+
 </body>
 </html>
 
