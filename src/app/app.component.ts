@@ -6,12 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  isDisabled: boolean
-  constructor() {
-    this.isDisabled = true
-  }
-
-  saludo() {
-    alert('Hola!')
+  input: string = ''
+  output: string = ''
+  invertirTexto() {
+    this.output = this.input.split('').reverse().join('')
   }
 }

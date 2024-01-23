@@ -7,8 +7,15 @@
   <title>Mi sitio</title>
 </head>
 <body>
-    <h1>Event Binding</h1>
-    <button class="boton" (click)="saludo()">Pulsa</button>
+  <div class="container">
+
+    <label class="">Introduce el texto</label>
+    <br>
+    <input class="form-control" type="text" id="inText" [(ngModel)]="input" />
+    <br>
+    <button class="btn btn-primary" id="butt" (click)="invertirTexto">Dar la vuelta al texto</button>
+    <input class="form-control" type="text" id="outText" readonly [(ngModel)]="output">
+  </div>
 </body>
 </html>
 
