@@ -6,28 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  inputA = ''
-  inputB = ''
+  operandoA = ''
+  operandoB = ''
   output = 0
 
-  sumar() {
-    this.output = Number(this.inputA) + Number(this.inputB)
-    this.inputA = ''
-    this.inputB = ''
-  }
-  restar() {
-    this.output = Number(this.inputA) + Number(this.inputB)
-    this.inputA = ''
-    this.inputB = ''
-  }
-  multiplicar() {
-    this.output = Number(this.inputA) + Number(this.inputB)
-    this.inputA = ''
-    this.inputB = ''
-  }
-  dividir() {
-    this.output = Number(this.inputA) + Number(this.inputB)
-    this.inputA = ''
-    this.inputB = ''
+  sumar(operandoA: HTMLInputElement, operandoB: HTMLInputElement, resultado: HTMLInputElement) {
+    resultado.value = String(Number(operandoA.value) + Number(operandoB.value))
   }
 }

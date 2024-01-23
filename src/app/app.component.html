@@ -11,18 +11,18 @@
     <h1>Calculadora</h1>
     <label class="">Operando A</label>
     <br>
-    <input class="form-control" type="number" id="inText" [(ngModel)]="inputA" />
+    <input id="operandoA" #operandoA class="form-control" type="number" id="inText"/>
     <br>
     <label class="">Operando B</label>
     <br>
-    <input class="form-control" type="number" id="inText" [(ngModel)]="inputB" />
+    <input id="operandoB" #operandoB class="form-control" type="number" id="inText"/>
     <br>
-    <button class="btn btn-primary me-2" id="butt" (click)="sumar">+</button>
-    <button class="btn btn-primary me-2" id="butt" (click)="restar">-</button>
+    <button class="btn btn-primary me-2" id="butt" (click)="sumar(operandoA, operandoB, resultado)">+</button>
+    <!-- <button class="btn btn-primary me-2" id="butt" (click)="restar">-</button>
     <button class="btn btn-primary me-2" id="butt" (click)="multiplicar">*</button>
-    <button class="btn btn-primary me-2" id="butt" (click)="dividir">/</button>
+    <button class="btn btn-primary me-2" id="butt" (click)="dividir">/</button> -->
     <br>
-    <input class="form-control mt-3" type="text" id="outText" readonly [(ngModel)]="output">
+    <input id="resultado" #resultado class="form-control mt-3" type="text" readonly>
   </div>
 </body>
 </html>
