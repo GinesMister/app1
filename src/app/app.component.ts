@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Contacto } from './models/contactoDTO';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  arrInt = [1, 2, 3, 4 ,5 ,123, 321, 12, 21, 32, 23]
+  agenda: Contacto[] = []
+
+  insertar(nombre: HTMLInputElement, telefono: HTMLInputElement, email: HTMLInputElement) {
+    const contacto: Contacto = new Contacto(nombre.value, telefono.value, email.value)
+    this.agenda.push(contacto)
+  }
 }

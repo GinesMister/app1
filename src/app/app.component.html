@@ -7,14 +7,32 @@
   <title>Mi sitio</title>
 </head>
 <body>
-  <div *ngFor="let element of arrInt">
-    <p>{{element}}</p>
-  </div>
+  <div class="container-fluid container">
+    <h1>Datos de entrada</h1>
+    <label for="">Nombre</label>
+    <input type="text" name="nombre" id="nombre" #nombre placeholder="Ingrese su nombre" class="form-control">
+    
+    <label for="">Telefono</label>
+    <input type="tel" name="telefono" id="telefono" #telefono placeholder="Ingrese su nombre" class="form-control">
 
-  <!-- Forma moderna -->
-  @for (element of arrInt; track $index) {
-    <p>Elemento {{$index}}: {{element}}</p>
-  }
+    <label for="">Email</label>
+    <input type="email" name="email" id="email" #email placeholder="Ingrese su nombre" class="form-control">
+
+    <button class="btn btn-primary mt-3" (click)="insertar(nombre, telefono, email)">Enviar</button>
+
+    <hr>
+    <!-- Listado de contactos -->
+    <div *ngFor="let element of agenda" class="list-group list-group-flush">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{element.nombre}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{element.telefono}}</h6>
+          <p class="card-text">{{element.email}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
 
