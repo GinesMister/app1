@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Contacto } from './models/contactoDTO';
+import { Vino } from './models/vinoDTO';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,16 @@ import { Contacto } from './models/contactoDTO';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  agenda: Contacto[] = []
-
-  insertar(nombre: HTMLInputElement, telefono: HTMLInputElement, email: HTMLInputElement) {
-    const contacto: Contacto = new Contacto(nombre.value, telefono.value, email.value)
-    this.agenda.push(contacto)
+  arrVino: Vino[]
+  
+  constructor() {
+    this.arrVino = []
   }
+
+  insertar(nombre: HTMLInputElement, pvp: HTMLInputElement) {
+    const vino: Vino = new Vino(nombre.value, Number(pvp.value))
+    this.arrVino.push(vino)
+    console.log(this.arrVino)
+  }
+
 }
