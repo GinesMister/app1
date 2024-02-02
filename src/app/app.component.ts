@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   insertar(nombre: HTMLInputElement, pvp: HTMLInputElement) {
-    const vino: Vino = new Vino(nombre.value, Number(pvp.value))
+    const vino: Vino = new Vino(nombre.value, pvp.valueAsNumber)
     this.arrVino.push(vino)
     console.log(this.arrVino)
   }
