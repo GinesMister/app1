@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Vino } from '../../Models/vinoDTO';
 import { VinoService } from '../../Services/vino.service';
 
 @Component({
